@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 def make_video_call_request(usename: str, passwd: str, source_url:str, input_text:str):
     auth = (usename, passwd)
@@ -76,9 +77,12 @@ def download_video(url, filename):
 
 if __name__ == "__main__":
 
-    # job_id = make_video_call_request(usename="bmVlbEBhdmlhdG8uY29uc3VsdGluZw", passwd="nozKyVtVAVQlIwuTw3n9X", source_url="https://create-images-results.d-id.com/api_docs/assets/alice_getting_started_v3.png", input_text="Welcome to MediPriority. it is an innovative AI-driven healthcare eco-system tool that revolutionizes patient care through intelligent AI based state-of-the-art technology.")
+    job_id = make_video_call_request(usename="bmVlbEBhdmlhdG8uY29uc3VsdGluZw", passwd="nozKyVtVAVQlIwuTw3n9X", source_url="https://create-images-results.d-id.com/api_docs/assets/alice_getting_started_v3.png", input_text="""Hey Neel happy weekend,
+I hope you're feeling okay today. It's important to take care of yourself, so make sure to get plenty of rest and stay hydrated by drinking lots of fluids like water, clear broth, or herbal tea. You might find over-the-counter pain relievers like Tylenol or Advil helpful for reducing fever and aches. A humidifier or a hot shower can also relieve congestion. Lastly, try to avoid contact with others to prevent spreading your illness. Take care and get well soon!""")
+    print(job_id)
     print('-------------')
-    # video_url =extract_video_link(usename="bmVlbEBhdmlhdG8uY29uc3VsdGluZw", passwd="nozKyVtVAVQlIwuTw3n9X", job_id=job_id)
-    video_url = extract_video_link(usename="bmVlbEBhdmlhdG8uY29uc3VsdGluZw", passwd="nozKyVtVAVQlIwuTw3n9X", job_id="tlk_haaNlxDsVAUBWN3lTT9fu")
+    time.sleep(20)
+    video_url =extract_video_link(usename="bmVlbEBhdmlhdG8uY29uc3VsdGluZw", passwd="nozKyVtVAVQlIwuTw3n9X", job_id=job_id)
+    # video_url = extract_video_link(usename="bmVlbEBhdmlhdG8uY29uc3VsdGluZw", passwd="nozKyVtVAVQlIwuTw3n9X", job_id="tlk_haaNlxDsVAUBWN3lTT9fu")
     print("---------")
-    download_video(url=video_url, filename="intro.mp4")
+    download_video(url=video_url, filename="intro2.mp4")
