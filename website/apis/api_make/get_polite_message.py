@@ -1,14 +1,14 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCS4mLoqkkoC1sPkLFlVt_oA"
+os.environ["GOOGLE_API_KEY"] = ""
 llm = ChatGoogleGenerativeAI(model = "gemini-1.5-flash",temperature=0)
 from crewai import Agent, Task, Crew
 
 from crewai_tools import SerperDevTool,tool 
 import os
 
-os.environ["SERPER_API_KEY"] = "46c876d4cd57f94fc82e98a74e64edfa757c744c"
+os.environ["SERPER_API_KEY"] = ""
 internet_search_tool = SerperDevTool()
 
 from crewai_tools import SerperDevTool, tool
@@ -16,7 +16,7 @@ import os
 import random
 
 # Set up the Serper API key
-os.environ["SERPER_API_KEY"] = "46c876d4cd57f94fc82e98a74e64edfa757c744c"
+os.environ["SERPER_API_KEY"] = ""
 internet_search_tool = SerperDevTool()
 
 @tool("get remedies")

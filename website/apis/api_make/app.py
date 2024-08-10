@@ -16,8 +16,8 @@ app = Flask(__name__)
 flask_cors.CORS(app)
 
 # Set up the environment variable for Google API Key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCS4mLoqkkoC1sPkLFlVt_1IA"
-GOOGLE_API_KEY = 'AIzaSyCS4mLoqkkoC1sPkLFlVt_oL11kt-m31IA'
+os.environ["GOOGLE_API_KEY"] = "##"
+GOOGLE_API_KEY = '##'
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize the LLM models
