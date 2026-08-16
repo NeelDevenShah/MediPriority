@@ -52,39 +52,54 @@ MediPriority is an AI-driven healthcare management system designed to streamline
 
 ## Application Screenshots
 
-### 💬 Medical Assistant Chatbot
-The patient interacts with a conversational AI chatbot that gathers symptom history, pain level, duration, and patient speculations to prepare an initial report.
+### Core Features Overview
+- **Medical Assistant Chatbot:** Gathers detailed symptom history, pain intensity, duration, and patient speculations.
+- **Visual Analysis Agent:** Identifies clinical visual indicators (skin color, eye condition, swelling) from patient video/image uploads.
+- **Prescription Analysis:** Automatically extracts and analyzes prescription details using AI.
+- **Visual AI Avatar:** Delivers personalized post-consultation remedies, instructions, and video support.
+- **Intelligent Slot Booking:** Dynamically schedules and prioritizes patient appointments based on urgency scores.
+- **Google Calendar Integration:** Schedules reminders for treatments and pre-appointment remedies.
+
+### Interface Gallery
+Below are the screen captures showcasing these features in action:
+
+#### 1. Medical Assistant Chatbot
 ![Medical Chatbot](assets/medical-chatbot.png)
 
-### 👁️ Visual Analysis Agent
-The system analyzes patient-submitted video/image content (e.g., skin color, eye condition, swelling) to capture visual cues and add objective indicators to the triage assessment.
+---
+
+#### 2. Visual Analysis Agent
 ![Visual Analysis Agent](assets/visual-analysis-agent.png)
 
-### 📋 Prescription Analysis
-Automated extraction and analysis of prescriptions using AI, ensuring accurate documentation of medication regimes.
+---
+
+#### 3. Prescription Analysis Tool
 ![Prescription Analysis](assets/prescription-analysis.png)
 
-### 🗣️ Visual AI Avatar
-A personalized video avatar that engages patients post-consultation to deliver tailored medical instructions, remedies, and support.
+---
+
+#### 4. Visual AI Avatar Interface
 ![Visual Avatar](assets/visual-avatar.png)
 
-### 📅 Intelligent Patient Slot Booking
-A smart booking agent that dynamically reserves and prioritizes clinic slots based on the patient's urgency score.
+---
+
+#### 5. Intelligent Patient Slot Booking
 ![Intelligent Patient Slot Booking](assets/intelligient-patient-slot-booking.png)
 
-### 🗓️ Google Calendar Remedies Reminder
-Seamless integration with Google Calendar to schedule reminders for medications and pre-appointment remedies.
+---
+
+#### 6. Google Calendar Remedies Reminder
 ![Google Calendar Remedies Reminder](assets/google-calendar-based-remedies-reminder.png)
 
+---
 
 ## Implementation Details
 
 ### Technology Stack
-- **Backend:** Node.js, Express.js
-- **Frontend:** React.js
-- **Database:** MongoDB
+- **Backend:** Python, Flask, CrewAI
+- **Frontend:** React, Next.js, TailwindCSS, NextUI
 - **AI Framework:** Crew AI framework for coordinating multiple AI agents
-- **Integration:** Google Calendar API, e-commerce platforms for medication ordering
+- **Integration:** Google Calendar API, D-ID API (for AI Avatars)
 
 ### Code Quality
 - **Modular Architecture:** Distinct components for input processing, prioritization, consultation support, etc.
