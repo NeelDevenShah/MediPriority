@@ -1,17 +1,11 @@
-from langchain_google_genai import ChatGoogleGenerativeAI
 import os
-
 os.environ["GOOGLE_API_KEY"] = ""
-llm = ChatGoogleGenerativeAI(model = "gemini-1.5-flash",temperature=0)
-from crewai import Agent, Task, Crew
 
-from crewai_tools import SerperDevTool,tool 
-import os
+from crewai import Agent, Task, Crew, LLM
+llm = LLM(model="gemini/gemini-1.5-flash", temperature=0)
 
-os.environ["SERPER_API_KEY"] = ""
-internet_search_tool = SerperDevTool()
-
-from crewai_tools import SerperDevTool, tool
+from crewai_tools import SerperDevTool
+from crewai.tools import tool
 import os
 import random
 
@@ -72,7 +66,7 @@ remedies_task = Task(
 crew = Crew(
     agents=[ remedies_agent],
     tasks=[remedies_task],
-    verbose=2
+    verbose=True
 )
 
 
