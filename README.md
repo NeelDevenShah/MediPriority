@@ -5,15 +5,13 @@ MediPriority is an AI-driven healthcare management system designed to streamline
 
 ## Project Assets
 
-- 📄 **[Presentation PDF](assets/presentation.pdf)**: Official presentation explaining the MediPriority system, its components, features, and target metrics.
-- 📊 **[Supporting Slides (PPTX)](assets/supporting_material.pptx)**: PowerPoint slides with supporting details and references.
+- 📄 **[Presentation (PDF)](assets/presentation.pdf)**: Official presentation explaining the MediPriority system, its components, features, and target metrics.
+- 📊 **[Supporting Slides (PDF)](assets/supporting_material.pdf)**: Detailed slides covering supporting research, details, and references.
 - 🖼️ **[Architecture Diagram](assets/architecture_diagram.png)**: High-level system architecture and data flow.
-- 🎨 **[Project Poster (PDF)](assets/poster.pdf)** / **[Interactive Poster (HTML)](assets/poster.html)**: Visual project poster showcasing MediPriority.
-- 🎬 **[Demo Video](assets/demo_video.mp4)**: Video demonstration showing the patient journey and agentic AI triage workflow.
-- 📜 **[Appointment Demo Script](assets/appointment_demo_script.docx)**: Step-by-step walkthrough script for the appointment booking demo.
-- 📝 **[Project Description](assets/project_description.txt)**: Comprehensive write-up detailing features and implementation rules.
-- 📞 **[Backend Standup Transcript](assets/backend_standup_transcript.txt)**: Meeting notes on the schemas, Neo4j projections, and recommendation model training.
-- 🔗 **[Reference Links](assets/reference_links.txt)**: API documentation links and third-party references (D-ID, Tactiq, Medpay, etc.).
+- 🎨 **[Project Poster (PDF)](assets/poster.pdf)**: Visual project poster showcasing the MediPriority architecture and clinical workflow.
+- 📜 **[Appointment Booking Demo Script (PDF)](assets/appointment_booking_demo.pdf)**: Step-by-step walkthrough script for the appointment booking demo.
+
+
 
 ## Key Features
 
@@ -51,6 +49,33 @@ MediPriority is an AI-driven healthcare management system designed to streamline
 - **Dynamic Booking System:** Adjusts appointment schedules dynamically based on urgency and availability, ensuring optimal resource allocation.
 
 ![MediPriority Architecture](assets/architecture_diagram.png)
+
+## Application Screenshots
+
+### 💬 Medical Assistant Chatbot
+The patient interacts with a conversational AI chatbot that gathers symptom history, pain level, duration, and patient speculations to prepare an initial report.
+![Medical Chatbot](assets/medical-chatbot.png)
+
+### 👁️ Visual Analysis Agent
+The system analyzes patient-submitted video/image content (e.g., skin color, eye condition, swelling) to capture visual cues and add objective indicators to the triage assessment.
+![Visual Analysis Agent](assets/visual-analysis-agent.png)
+
+### 📋 Prescription Analysis
+Automated extraction and analysis of prescriptions using AI, ensuring accurate documentation of medication regimes.
+![Prescription Analysis](assets/prescription-analysis.png)
+
+### 🗣️ Visual AI Avatar
+A personalized video avatar that engages patients post-consultation to deliver tailored medical instructions, remedies, and support.
+![Visual Avatar](assets/visual-avatar.png)
+
+### 📅 Intelligent Patient Slot Booking
+A smart booking agent that dynamically reserves and prioritizes clinic slots based on the patient's urgency score.
+![Intelligent Patient Slot Booking](assets/intelligient-patient-slot-booking.png)
+
+### 🗓️ Google Calendar Remedies Reminder
+Seamless integration with Google Calendar to schedule reminders for medications and pre-appointment remedies.
+![Google Calendar Remedies Reminder](assets/google-calendar-based-remedies-reminder.png)
+
 
 ## Implementation Details
 
