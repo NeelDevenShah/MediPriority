@@ -3,6 +3,17 @@
 ## Overview
 MediPriority is an AI-driven healthcare management system designed to streamline the patient care journey from pre-consultation to post-consultation. Leveraging advanced AI technologies, MediPriority aims to improve patient outcomes, enhance efficiency, and reduce the administrative burden on healthcare providers. Key features include multi-agent AI systems for various tasks, dynamic urgency scoring, visual analysis, personalized AI avatars, and seamless integration with everyday tools like Google Calendar.
 
+## Project Assets
+
+- 📄 **[Presentation PDF](assets/presentation.pdf)**: Official presentation explaining the MediPriority system, its components, features, and target metrics.
+- 📊 **[Supporting Slides (PPTX)](assets/supporting_material.pptx)**: PowerPoint slides with supporting details and references.
+- 🖼️ **[Architecture Diagram](assets/architecture_diagram.png)**: High-level system architecture and data flow.
+- 🎬 **[Demo Video](assets/demo_video.mp4)**: Video demonstration showing the patient journey and agentic AI triage workflow.
+- 📜 **[Appointment Demo Script](assets/appointment_demo_script.docx)**: Step-by-step walkthrough script for the appointment booking demo.
+- 📝 **[Project Description](assets/project_description.txt)**: Comprehensive write-up detailing features and implementation rules.
+- 📞 **[Backend Standup Transcript](assets/backend_standup_transcript.txt)**: Meeting notes on the schemas, Neo4j projections, and recommendation model training.
+- 🔗 **[Reference Links](assets/reference_links.txt)**: API documentation links and third-party references (D-ID, Tactiq, Medpay, etc.).
+
 ## Key Features
 
 ### 1. Multi-Agent AI System
@@ -38,7 +49,7 @@ MediPriority is an AI-driven healthcare management system designed to streamline
 - **Matchmaking System:** Uses AI to match patients with the most suitable doctors based on their medical needs and preferences.
 - **Dynamic Booking System:** Adjusts appointment schedules dynamically based on urgency and availability, ensuring optimal resource allocation.
 
-![Alt Text](Docs/MediPriority.png)
+![MediPriority Architecture](assets/architecture_diagram.png)
 
 ## Implementation Details
 

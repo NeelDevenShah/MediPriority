@@ -1,7 +1,7 @@
 
 import os
 from flask import Flask, request, jsonify, send_file
-from crewai import Crew, Agent, Task
+from crewai import Crew, Agent, Task, LLM
 from langchain_google_genai import ChatGoogleGenerativeAI
 import flask_cors
 import re
@@ -16,13 +16,13 @@ app = Flask(__name__)
 flask_cors.CORS(app)
 
 # Set up the environment variable for Google API Key
-os.environ["GOOGLE_API_KEY"] = "##"
-GOOGLE_API_KEY = '##'
+os.environ["GOOGLE_API_KEY"] = ""
+GOOGLE_API_KEY = ''
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize the LLM models
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
-llm_pro = ChatGoogleGenerativeAI(model="gemini-pro")
+crew_llm = LLM(model="gemini/gemini-1.5-flash", temperature=0)
 genai_llm = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
 
 # Set up upload folder
@@ -34,7 +34,7 @@ symptom_assessment_agent = Agent(
     role="Symptom Assessment Agent",
     goal="To assess the patient's symptoms and categorize them as severe, moderate, or mild.",
     backstory="An analytical agent focused on identifying and categorizing symptoms based on severity.",
-    llm=llm,
+    llm=crew_llm,
     allow_delegation=False,
     verbose=True
 )
@@ -54,7 +54,7 @@ external_factors_agent = Agent(
     role="External Factors Agent",
     goal="To evaluate additional factors such as age, symptom duration, and medication effectiveness.",
     backstory="A diligent agent designed to assess external factors that impact patient urgency.",
-    llm=llm,
+    llm=crew_llm,
     allow_delegation=False,
     verbose=True
 )
@@ -73,7 +73,7 @@ final_urgency_agent = Agent(
     role="Final Urgency Ranking Agent",
     goal="To combine the scores from symptom assessment and external factors to determine the patient's urgency level.",
     backstory="A precise agent that combines different scores to provide a final urgency ranking.",
-    llm=llm,
+    llm=crew_llm,
     allow_delegation=False,
     verbose=True
 )
@@ -138,7 +138,7 @@ Determine the urgency level:
 """
 
 crew = Crew(agents=[symptom_assessment_agent, external_factors_agent, final_urgency_agent],
-            tasks=[symptom_assessment_task, external_factors_task, final_urgency_task], verbose=2)
+            tasks=[symptom_assessment_task, external_factors_task, final_urgency_task], verbose=True)
 
 
 @app.route('/api/analyze', methods=['POST'])
